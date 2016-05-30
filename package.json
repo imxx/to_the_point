@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "bower": "1.7.9"
   },
   "devDependencies": {
     "browser-sync": "^2.12.10",
