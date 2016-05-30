@@ -1,0 +1,90 @@
+/*
+*
+*	HEADER
+*
+*/
+
+.header{
+	margin-top: -1px;
+	border-top: 1px solid transparent;
+	height: 150px;
+}
+
+.logo{
+	float: left;
+	h1{
+		margin-left: 20px;
+		margin-top: 58px;
+		color: #5b5b5b;
+		font-size: 42px;
+		line-height: 50px;
+		font-weight: 300;
+	}
+}
+
+.main-navigation{
+	float: right;
+	margin-left: 20px;
+
+	ul{
+		list-style: none;
+		margin-top: 0;
+		margin-right: 20px;
+		padding-left: 0;
+
+		li{
+			margin-left: 10px;
+			padding-top: 73px;
+			float: left;
+			display: block;
+		}
+
+		a{
+			display: block;
+			padding: 4px 10px;
+			text-decoration: none;
+			color: #5b5b5b;
+			text-transform: uppercase;
+			font-size: 13px;
+			line-height: 15px;
+			clear: both;
+
+			&:hover::after{
+				content: "";
+				display: block;
+				margin-top: 4px;
+				border-bottom: 1px solid #5b5b5b;
+			};
+		}
+	}
+}
+
+/*
+*	CHROME HACKS
+*/
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .main-navigation a:hover{  margin-top: -1px;}
+    .header{ height: 136px; }
+}
+*/
+
+
+li.link-active {
+	background-color: #5b5b5b;
+	border: 5px solid #e8e8e8;
+	border-top: none;
+
+	a{
+		color: white;
+		cursor: default;
+
+		&:hover{
+			margin-top: 0;
+		};
+
+		&:hover::after{
+			display: none;
+		};
+	}
+}
