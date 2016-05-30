@@ -12,13 +12,14 @@
 
 .about-adjuster{
 	margin: 0 auto;
-	width: 960px;
+	max-width: 960px;
 }
 
 .contact-us{
 	float: left;
 	width: 340px;
 	margin-bottom: 40px;
+	margin-right: 20px;
 
 	h3{
 		margin-top: 35px;
@@ -132,8 +133,6 @@
 		margin: 0;
 
 		li{
-			float: left;
-			width: 33%;
 
 			li{
 				float: none;
@@ -327,5 +326,46 @@ footer{
 	}
 	.copyright-2{
 		float: right;
+	}
+}
+
+
+/*
+*
+*	BOOTSTRAP TWEAKS
+*
+*/
+
+
+
+/*
+*
+*	RESPONSIVENESS
+*
+*/
+
+
+@media screen and (max-width: 1010px){
+	.about-adjuster{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media screen and (max-width: 986px){
+	.about-links{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 523px){
+	.company-about-info, .company-details{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.company-blog{
+		width: 100%;
 	}
 }

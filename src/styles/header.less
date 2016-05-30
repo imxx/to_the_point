@@ -7,14 +7,13 @@
 .header{
 	margin-top: -1px;
 	border-top: 1px solid transparent;
-	height: 150px;
 }
 
 .logo{
-	float: left;
 	h1{
 		margin-left: 20px;
 		margin-top: 58px;
+		margin-bottom: 40px;
 		color: #5b5b5b;
 		font-size: 42px;
 		line-height: 50px;
@@ -24,7 +23,6 @@
 
 .main-navigation{
 	float: right;
-	margin-left: 20px;
 
 	ul{
 		list-style: none;
@@ -87,4 +85,58 @@ li.link-active {
 			display: none;
 		};
 	}
+}
+
+
+/*
+*
+*	BOOTSTRAP TWEAKS
+*
+*/
+
+.navbar-default{
+	background-color: transparent;
+}
+
+.navbar-toggle{
+	margin-top: 30px;
+}
+
+/*
+*
+*	RESPONSIVENESS
+*
+*/
+
+@media screen and (max-width: 871px) and (min-width: 768px){
+	.logo h1{
+		margin-left: 0;
+	}
+
+	.main-navigation ul{
+		margin-right: 0;
+	}
+	.header{
+		margin-right: -45px;
+	}
+}
+
+
+@media screen and (max-width: 767px){
+	.logo h1 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.main-navigation ul li{
+		padding-top: 0;
+	}
+
+	.main-navigation ul li.link-active{
+		border: 0;
+	}
+
+	.main-navigation ul a:hover::after{
+		display: none;
+	};
 }

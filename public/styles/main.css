@@ -9,12 +9,13 @@
 }
 .about-adjuster {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
 }
 .contact-us {
   float: left;
   width: 340px;
   margin-bottom: 40px;
+  margin-right: 20px;
 }
 .contact-us h3 {
   margin-top: 35px;
@@ -112,10 +113,6 @@
   list-style: none;
   padding-left: 0;
   margin: 0;
-}
-.about-links ul li {
-  float: left;
-  width: 33%;
 }
 .about-links ul li li {
   float: none;
@@ -282,6 +279,38 @@ footer .copyright {
 footer .copyright-2 {
   float: right;
 }
+/*
+*
+*	BOOTSTRAP TWEAKS
+*
+*/
+/*
+*
+*	RESPONSIVENESS
+*
+*/
+@media screen and (max-width: 1010px) {
+  .about-adjuster {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 986px) {
+  .about-links {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 523px) {
+  .company-about-info,
+  .company-details {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .company-blog {
+    width: 100%;
+  }
+}
 
 /*
 *
@@ -293,12 +322,7 @@ footer .copyright-2 {
   padding: 0;
   margin: 0;
   margin-left: 20px;
-  margin-right: 20px;
-}
-.articles li {
-  float: left;
-  width: 25%;
-  background: url("/images/shadow.png") 10px 186px no-repeat;
+  margin-right: 5px;
 }
 .articles h3 {
   margin-top: 38px;
@@ -308,11 +332,15 @@ footer .copyright-2 {
   font-weight: 300;
   color: #666666;
 }
+.articles .shadow-wrapper {
+  padding-bottom: 12px;
+  background: url("/images/shadow.png") 9px bottom no-repeat;
+}
 .articles img {
+  display: block;
   width: 225px;
   height: 100px;
   background-color: #333333;
-  margin-bottom: 30px;
 }
 .articles p {
   font-size: 12px;
@@ -321,6 +349,7 @@ footer .copyright-2 {
   font-family: "Verdana", sans-serif;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
   padding-right: 15px;
   margin-bottom: 22px;
 }
@@ -348,6 +377,25 @@ footer .copyright-2 {
   background: -moz-linear-gradient(top, #ffffff 0%, #c0c0c0 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #c0c0c0 100%);
 }
+/*
+*
+*	BOOTSTRAP TWEAKS
+*
+*/
+.articles .col-md-3 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/*
+*
+*	RESPONSIVENESS
+*
+*/
+@media screen and (max-width: 991px) {
+  .articles .col-md-3 {
+    padding-right: 20px;
+  }
+}
 
 /*
 *
@@ -357,14 +405,11 @@ footer .copyright-2 {
 .header {
   margin-top: -1px;
   border-top: 1px solid transparent;
-  height: 150px;
-}
-.logo {
-  float: left;
 }
 .logo h1 {
   margin-left: 20px;
   margin-top: 58px;
+  margin-bottom: 40px;
   color: #5b5b5b;
   font-size: 42px;
   line-height: 50px;
@@ -372,7 +417,6 @@ footer .copyright-2 {
 }
 .main-navigation {
   float: right;
-  margin-left: 20px;
 }
 .main-navigation ul {
   list-style: none;
@@ -426,6 +470,48 @@ li.link-active a:hover {
 li.link-active a:hover::after {
   display: none;
 }
+/*
+*
+*	BOOTSTRAP TWEAKS
+*
+*/
+.navbar-default {
+  background-color: transparent;
+}
+.navbar-toggle {
+  margin-top: 30px;
+}
+/*
+*
+*	RESPONSIVENESS
+*
+*/
+@media screen and (max-width: 871px) and (min-width: 768px) {
+  .logo h1 {
+    margin-left: 0;
+  }
+  .main-navigation ul {
+    margin-right: 0;
+  }
+  .header {
+    margin-right: -45px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .main-navigation ul li {
+    padding-top: 0;
+  }
+  .main-navigation ul li.link-active {
+    border: 0;
+  }
+  .main-navigation ul a:hover::after {
+    display: none;
+  }
+}
 
 body {
   font-family: "Georgia", serif;
@@ -438,9 +524,9 @@ img {
   border: 0;
   outline: 0;
 }
-.container {
+.main-container {
   margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
   background-color: white;
   border-top: 10px solid #5b5b5b;
 }
@@ -593,7 +679,7 @@ img {
 .slider-info {
   float: left;
   margin-left: 20px;
-  width: 350px;
+  width: 352px;
   border-top: 1px solid transparent;
   margin-bottom: 110px;
 }
@@ -632,6 +718,7 @@ img {
 }
 .slider-images {
   margin-top: 36px;
+  margin-bottom: 50px !important;
   height: 275px !important;
   float: right;
   margin-right: 20px;
@@ -642,4 +729,23 @@ img {
 .central-slider-image {
   width: 515px;
   height: 275px;
+}
+@media screen and (max-width: 991px) {
+  .slider {
+    text-align: center;
+    padding-right: 20px;
+  }
+  .slider-info {
+    width: 100%;
+  }
+  .slider-images {
+    float: none;
+    display: inline-block;
+  }
+  .ribbon-tails {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
 }

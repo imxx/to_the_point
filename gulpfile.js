@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var nodemon = require('gulp-nodemon');
+var wiredep = require("wiredep").stream;
 var $ = require("gulp-load-plugins")({ lazy: true });
 
 
@@ -51,4 +52,16 @@ gulp.task("optimize-css", ["styles"], function(){
 
 gulp.task("watch-styles", function(){
 	gulp.watch("./src/styles/**.less", ["styles"]);
+});
+
+gulp.task("wiredep", function(){
+	var bowerJson = require("./bower.json");
+
+	return gulp.src("./public/index.html")
+				.pipe(wiredep({
+					bowerJson: bowerJson,
+					directory: "./bower_components",
+					ignorePath: "../.."
+				}))
+				.pipe(gulp.dest("./public/"));
 });

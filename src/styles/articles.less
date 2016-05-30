@@ -13,13 +13,11 @@
 		padding: 0;
 		margin: 0;
 		margin-left: 20px;
-		margin-right: 20px;
+		margin-right: 5px;
 	}
 
 	li{
-		float: left;
-		width: 25%;
-		background: url("/images/shadow.png") 10px 186px no-repeat;
+		
 	}
 
 	h3{
@@ -31,11 +29,16 @@
 		color: #666666;
 	}
 
+	.shadow-wrapper{
+		padding-bottom: 12px;
+		background: url("/images/shadow.png") 9px bottom no-repeat;
+	}
+
 	img{
+		display: block;
 		width: 225px;
 		height: 100px;
 		background-color: #333333;
-		margin-bottom: 30px;
 	}
 
 	p{
@@ -45,6 +48,7 @@
 		font-family: "Verdana", sans-serif;
 		padding:0;
 		margin:0;
+		margin-top: 10px;
 		padding-right: 15px;
 		margin-bottom: 22px;
 	}
@@ -69,5 +73,29 @@
 		&:hover{
 			background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(192,192,192,1) 100%);;
 		}
+	}
+}
+
+/*
+*
+*	BOOTSTRAP TWEAKS
+*
+*/
+
+.articles .col-md-3{
+	padding-left: 0px;
+	padding-right: 0px;
+};
+
+
+/*
+*
+*	RESPONSIVENESS
+*
+*/
+
+@media screen and (max-width: 991px){
+	.articles .col-md-3{
+		padding-right: 20px;
 	}
 }

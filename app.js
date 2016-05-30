@@ -6,6 +6,7 @@ var app = express();
 var router = express.Router();
 
 app.use(express.static('public'));
+app.use(express.static("bower_components"))
 app.get('/', function(req, res) {
     res.sendfile('./public/index.html');
 });

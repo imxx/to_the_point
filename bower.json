@@ -1,0 +1,21 @@
+{
+  "name": "to_the_point",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "imxx <imxxyz72@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/imxx/to_the_point",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
